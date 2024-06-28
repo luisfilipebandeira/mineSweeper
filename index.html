@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minesweeper Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <table id="table">
+        <tbody>
+            <tr>
+                <th><label for="gameName">Game Name:</label></th>
+                <td><input type="text" id="gameName" placeholder="Enter game name"></td>
+            </tr>
+            <tr>
+                <th><label for="numRows">Rows:</label></th>
+                <td><input type="number" id="numRows" value="8" min="4"></td>
+            </tr>
+            <tr>
+                <th><label for="numCols">Cols:</label></th>
+                <td><input type="number" id="numCols" value="8" min="4"></td>
+            </tr>
+            <tr>
+                <th><label for="numMines">Mines:</label></th>
+                <td><input type="number" id="numMines" value="4" min="4"></td>
+            </tr>
+            </tbody>
+        </table>
+        <button id="createGameButton">Create Game</button>      
+    <div>
+        <h1>Minesweeper Commands</h1>
+        <table id="commandsTable">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ArrowUp</td>
+                    <td>Move focus up</td>
+                </tr>
+                <tr>
+                    <td>ArrowDown</td>
+                    <td>Move focus down</td>
+                </tr>
+                <tr>
+                    <td>ArrowLeft</td>
+                    <td>Move focus left</td>
+                </tr>
+                <tr>
+                    <td>ArrowRight</td>
+                    <td>Move focus right</td>
+                </tr>
+                <tr>
+                    <td>f</td>
+                    <td>Flag focused cell</td>
+                </tr>
+                <tr>
+                    <td>s</td>
+                    <td>Reveal cell</td>
+                </tr>
+                <tr>
+                    <td>Enter</td>
+                    <td>Focus cell in the board</td>
+                </tr>
+                <tr>
+                    <td>Tab</td>
+                    <td>Change Board</td>
+                </tr>
+                <tr>
+                    <td>Esc</td>
+                    <td>Close Modal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="highScore">
+        <h2>High Score</h2>
+        <p id="highScoreValue"></p>
+    </div>
+    <div id="gamesContainer"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>    
+    <script src="./script.js"></script>
+</body>
+</html>
